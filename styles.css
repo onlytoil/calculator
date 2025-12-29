@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 20px;
+}
+
+.calculator {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.js-input {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.js-input-a {
+    flex: 1;
+    min-width: 120px;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.js-input-b {
+    flex: 1;
+    min-width: 120px;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.js-input-a:focus {
+    border-color: #ffd166;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+.js-input-b:focus {
+    border-color: #ffd166;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.js-input-a::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.js-input-b::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.js-select-operation {
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    min-width: 80px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.js-select-operation:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #ffd166;
+}
+
+.js-select-operation option {
+    background: #6a11cb;
+    color: white;
+    padding: 10px;
+}
+
+.js-button-result {
+    width: 100%;
+    padding: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2575fc;
+    background: #ffd166;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.js-button-result:hover {
+    background: #ffc145;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.js-button-result:active {
+    transform: translateY(0);
+}
+
+.js-output {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin: 0;
+    min-height: 30px;
+}
+
+#js-output {
+    font-weight: bold;
+    color: #ffd166;
+    font-size: 28px;
+    display: inline-block;
+    min-width: 80px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 500px) {
+    .calculator {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .js-input {
+        flex-direction: column;
+    }
+    
+    .js-input-a {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .js-input-b {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .js-select-operation {
+        width: 100%;
+    }
+}
